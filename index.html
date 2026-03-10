@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Unicornio Negro · Brujo Mayor de Catemaco</title>
+  <!-- Fuentes místicas y elegantes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ===== RESET Y PALETA MÍSTICA ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background: #0a0401;
+      color: #eedcc9;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-image: radial-gradient(circle at 10% 20%, rgba(155, 82, 0, 0.08) 0%, transparent 35%);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0.8rem 0.8rem 0 0.8rem;
+    }
+
+    /* ===== HEADER ===== */
+    .main-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 1.2rem;
+      background: #1f130b;
+      padding: 0.5rem 1rem;
+      border-radius: 60px;
+      box-shadow: 0 8px 0 rgba(212, 175, 55, 0.2);
+      border: 1px solid #b48c3c;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .logo-container {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custom-logo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 4px #b89147);
+    }
+
+    .logo-placeholder {
+      width: 44px;
+      height: 44px;
+      background: #1e110a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #cfb166;
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      font-size: 1.6rem;
+      border: 2px solid #b89147;
+      box-shadow: 0 0 12px #b27e35;
+    }
+
+    .logo-area h1 {
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: 'Cinzel', serif;
+      color: #e4c580;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+    .logo-area h1 span {
+      display: block;
+      font-size: 0.65rem;
+      color: #b48c6c;
+      letter-spacing: 2px;
+    }
+
+    .badge {
+      background: #2a1c12;
+      padding: 0.3rem 0.9rem;
+      border-radius: 30px;
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 0.55rem;
+      color: #e9cf97;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border: 1px solid #9e7e50;
+      text-transform: uppercase;
+    }
+
+    .badge i {
+      color: #c9a253;
+      font-size: 0.6rem;
+    }
+
+    /* ===== HERO ===== */
+    .hero-section {
+      background: linear-gradient(145deg, #1e0d04 0%, #2e180b 100%);
+      border-radius: 40px 40px 40px 0;
+      padding: 2.2rem 1.2rem 1.8rem 1.2rem;
+      margin-bottom: 1.5rem;
+      color: #fbead5;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -10px #0f0602, 0 0 0 2px #b48c3c inset, 0 0 20px #ad7c3b;
+      border-left: 6px solid #a57c3a;
+    }
+
+    .hero-content h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.9rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 10px #b8872e;
+    }
+
+    .hero-accent {
+      color: #eab466;
+      border-bottom: 3px double #a16e2c;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      font-weight: 400;
+      font-style: italic;
+      margin-bottom: 1.8rem;
+      opacity: 0.9;
+      color: #e1c7a8;
+    }
+
+    /* ===== SECCIÓN IMAGEN UNICORNIO ===== */
+    .unicorn-image-section {
+      margin: 1.5rem 0 2rem 0;
+      text-align: center;
+    }
+
+    .unicorn-image-container {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      border-radius: 30px 10px 30px 10px;
+      overflow: hidden;
+      border: 4px solid #b48c3c;
+      box-shadow: 0 15px 25px -8px #000, 0 0 30px #ab7f3b;
+      background: #1a0f08;
+    }
+
+    .unicorn-image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .unicorn-image-container img:hover {
+      transform: scale(1.02);
+    }
+
+    .image-caption {
+      font-family: 'Cinzel', serif;
+      color: #eac384;
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ===== BOTÓN CTA SIN TRACK (SOLO MUESTRA FORMULARIO) ===== */
+    .btn-cta {
+      background: #312213;
+      color: #eac384;
+      border: 2px solid #bb9535;
+      padding: 0.9rem 1.8rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      font-family: 'Cinzel', serif;
+      border-radius: 60px;
+      cursor: pointer;
+      box-shadow: 0 8px 0 #5e3f19, 0 12px 25px -5px #0e0702;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      justify-content: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: vibrar 1.2s infinite ease-in-out;
+    }
+
+    @keyframes vibrar {
+      0% { transform: translateX(0); }
+      10% { transform: translateX(-2px) rotate(-0.5deg); }
+      20% { transform: translateX(2px) rotate(0.5deg); }
+      30% { transform: translateX(-2px) rotate(-0.5deg); }
+      40% { transform: translateX(2px) rotate(0.5deg); }
+      50% { transform: translateX(-1px) rotate(-0.3deg); }
+      60% { transform: translateX(1px) rotate(0.3deg); }
+      70% { transform: translateX(-1px) rotate(-0.2deg); }
+      80% { transform: translateX(0) rotate(0); }
+      100% { transform: translateX(0); }
+    }
+
+    .btn-cta i {
+      font-size: 1.2rem;
+      color: #c9a458;
+    }
+
+    .btn-cta:hover {
+      background: #422f1d;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 0 #5e3f19, 0 18px 30px #0a0401;
+      animation: none;
+    }
+
+    /* ===== SECCIÓN BENEFICIOS ===== */
+    .section-title {
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #e2b66b;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 0 #341f0e;
+    }
+
+    .benefits-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .benefit-card {
+      background: #24170e;
+      border-radius: 30px 10px 30px 10px;
+      padding: 1.2rem;
+      box-shadow: 0 10px 0 #3a281b, 0 0 0 1px #b68f4b inset;
+      border-left: 5px solid #cba458;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-align: left;
+    }
+
+    .benefit-icon-lg {
+      background: #1c110a;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #dbb054;
+      border: 2px dashed #b38943;
+      box-shadow: 0 0 15px #785f2c;
+      flex-shrink: 0;
+    }
+
+    .benefit-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ebc882;
+      margin-bottom: 0.2rem;
+      text-transform: uppercase;
+    }
+
+    .benefit-card p {
+      color: #dcc4a8;
+      font-size: 0.85rem;
+      line-height: 1.3;
+    }
+
+    /* ===== EVIDENCIAS DE PODER (CARRUSEL) ===== */
+    .evidencias-section {
+      margin: 2.5rem 0;
+      padding: 1.5rem 0.5rem;
+      background: #1a0f08;
+      border-radius: 40px 10px 40px 10px;
+      border: 2px solid #b48c3c;
+      box-shadow: 0 0 20px #00000080;
+    }
+
+    .evidencias-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.6rem;
+      color: #e9cf9c;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .evidencias-sub {
+      text-align: center;
+      color: #dbbf89;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .evidencias-carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      margin: 0 auto;
+    }
+
+    .evidencias-inner {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .evidencia-item {
+      min-width: 100%;
+      padding: 0.5rem;
+    }
+
+    .evidencia-card {
+      background: #24170e;
+      border: 2px solid #b38943;
+      border-radius: 30px 5px 30px 5px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 10px 15px -5px #000;
+    }
+
+    .evidencia-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px 2px 20px 2px;
+      border: 3px solid #b48c3c;
+      margin-bottom: 1rem;
+      background: #2b1e12;
+    }
+
+    .evidencia-titulo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      color: #ebc285;
+      margin-bottom: 0.5rem;
+    }
+
+    .evidencia-desc {
+      color: #e2cdb0;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Botón de las evidencias - sin track, solo muestra formulario */
+    .btn-evidencia-form {
+      display: inline-block;
+      background: #1f3b2b;
+      color: #eedab3;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-family: 'Cinzel', serif;
+      border: 2px solid #b48b42;
+      font-size: 0.9rem;
+      margin: 0.5rem auto 0;
+      width: auto;
+      min-width: 180px;
+      transition: 0.2s;
+      cursor: pointer;
+      border: none;
+      background: #25D366;
+      color: white;
+      border: 2px solid #075E54;
+    }
+
+    .btn-evidencia-form:hover {
+      background: #128C7E;
+      transform: scale(1.02);
+    }
+
+    .evidencias-controls {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .evidencias-btn {
+      background: #2b1a0c;
+      border: 2px solid #b38840;
+      color: #dfb367;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      box-shadow: 0 5px 0 #3f2d18;
+    }
+
+    .evidencias-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .evidencia-dot {
+      width: 12px;
+      height: 12px;
+      background: #6b4d27;
+      transform: rotate(45deg);
+      cursor: pointer;
+      border: 1px solid #c09f5a;
+    }
+
+    .evidencia-dot.active {
+      background: #ebc06f;
+      box-shadow: 0 0 10px #ebc06f;
+    }
+
+    /* ===== TESTIMONIOS EN GRID (2 COLUMNAS) ===== */
+    .testimonios-grid-section {
+      margin: 2.5rem 0;
+    }
+
+    .testimonios-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .testimonio-card-grid {
+      background: #2a1b10;
+      border-radius: 15px 5px 15px 5px;
+      padding: 1rem 0.6rem;
+      box-shadow: 0 5px 0 #3d2a19, 0 0 0 1px #b28b48 inset;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .testimonio-foto-grid {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #b48c3c;
+      margin-bottom: 0.6rem;
+    }
+
+    .testimonio-foto-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .testimonio-nombre-grid {
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #ebc285;
+    }
+
+    .testimonio-ubicacion-grid {
+      color: #b59152;
+      font-size: 0.7rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .testimonio-estrellas-grid {
+      color: #d4af37;
+      font-size: 0.7rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonio-texto-grid {
+      font-style: italic;
+      color: #f0dbc0;
+      font-size: 0.75rem;
+      line-height: 1.3;
+    }
+
+    /* ===== SECCIÓN CAPTURAS DE CHATS ===== */
+    .chats-section {
+      margin: 2.5rem 0 2rem;
+    }
+    .chats-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      margin-top: 1.5rem;
+    }
+    .chat-card {
+      background: #1a0f08;
+      border: 2px solid #b48c3c;
+      border-radius: 30px 5px 30px 5px;
+      padding: 0.8rem;
+      box-shadow: 0 15px 20px -10px #000, 0 0 0 1px #dbb45c inset;
+      transition: transform 0.3s;
+    }
+    .chat-card:hover {
+      transform: scale(1.02);
+    }
+    .chat-image {
+      width: 100%;
+      border-radius: 20px 2px 20px 2px;
+      overflow: hidden;
+      border: 3px solid #b38943;
+      background: #231509;
+    }
+    .chat-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .chat-caption {
+      font-family: 'Cinzel', serif;
+      color: #e9c488;
+      text-align: center;
+      margin-top: 0.7rem;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+
+    /* ===== FORMULARIO ===== */
+    .form-section {
+      display: none;
+      margin: 1rem 0 2rem;
+      animation: aparicion 0.7s ease forwards;
+    }
+
+    @keyframes aparicion {
+      0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .form-card {
+      background: #1a1009;
+      border-radius: 40px 10px 40px 10px;
+      padding: 1.5rem;
+      box-shadow: 0 20px 0 #2c1b0e, 0 0 0 2px #b38b44 inset, 0 0 30px #3a2818;
+      border: 1px solid #caa151;
+    }
+
+    .form-header h3 {
+      font-size: 1.8rem;
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      color: #eac384;
+      text-align: center;
+      margin-bottom: 0.2rem;
+    }
+
+    .form-header p {
+      color: #daba8b;
+      font-size: 0.85rem;
+      text-align: center;
+      margin-bottom: 1.2rem;
+    }
+
+    /* Mensaje agregado arriba del formulario */
+    .form-intro-message {
+      text-align: center;
+      background: #2d1d0f;
+      border-left: 4px solid #eac384;
+      padding: 0.8rem;
+      border-radius: 30px 5px 30px 5px;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      color: #ecdbba;
+      font-style: italic;
+      border: 1px solid #b48c3c;
+    }
+
+    .form-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .form-group label {
+      font-family: 'Cinzel', serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      color: #dbb870;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .form-group label i {
+      color: #cfa45c;
+      font-size: 0.8rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.8rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      border: 2px solid #5f4a2e;
+      border-radius: 20px 2px 20px 2px;
+      background: #251a11;
+      color: #f3dfc3;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #cfac62;
+      box-shadow: 0 0 10px #b27e35;
+    }
+
+    /* Estilo para el campo de texto personalizado que aparece al seleccionar la opción */
+    #mensajePersonalizadoContainer {
+      margin-top: 5px;
+    }
+
+    .btn-primary {
+      background: #332212;
+      color: #f3daa5;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 1rem;
+      border: 2px solid #bb974b;
+      border-radius: 60px;
+      width: 100%;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 8px 0 #503d1f;
+    }
+
+    .resultado {
+      text-align: center;
+      display: none;
+      margin-top: 1.5rem;
+    }
+
+    .loader {
+      border: 4px solid #382b1a;
+      border-top: 4px solid #c6a154;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      animation: spin 1.2s linear infinite;
+      margin: 15px auto;
+    }
+
+    @keyframes spin { 0% { transform: rotate(0); } 100% { transform: rotate(360deg); } }
+
+    .resumen {
+      text-align: left;
+      background: #2d1d0f;
+      border-left: 6px solid #b48b42;
+      padding: 1.2rem;
+      border-radius: 16px 0 16px 0;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      color: #ecdbba;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background: #1f3b2b;
+      color: #eedab3;
+      padding: 0.8rem 1.5rem;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 600;
+      font-family: 'Cinzel', serif;
+      border: 2px solid #b48b42;
+      width: 100%;
+      max-width: 280px;
+      margin: 0.5rem auto;
+      cursor: pointer;
+    }
+
+    /* ===== BOTÓN FLOTANTE DE WHATSAPP (SIN TRACK) ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5), 0 0 0 2px #075E54;
+      cursor: pointer;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      animation: float 2s infinite ease-in-out;
+      border: 3px solid #075E54;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background: #128C7E;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.7);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* ===== FOOTER ===== */
+    .footer-legal {
+      background: #0f0804;
+      color: #b99f78;
+      padding: 1.8rem 1rem;
+      border-radius: 40px 40px 0 0;
+      margin-top: 3rem;
+      border-top: 6px solid #8f703b;
+      text-align: center;
+      font-family: 'Cinzel', serif;
+    }
+
+    .legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1.2rem 0;
+    }
+
+    .legal-links a {
+      color: #cfb181;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.75rem;
+      border-bottom: 1px dashed #9e8148;
+    }
+
+    .footer-legal p {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .footer-legal small {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.55rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2118586505648212');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2118586505648212&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- BOTÓN FLOTANTE DE WHATSAPP (SIN TRACK, SOLO MUESTRA FORMULARIO) -->
+<div class="whatsapp-float" onclick="showFormOnly()">
+  <i class="fab fa-whatsapp"></i>
+</div>
+
+<div class="container">
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="logo-area">
+      <div class="logo-container">
+        <img src="unicornio-logo.png" alt="Unicornio Negro" class="custom-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="display: block;">
+        <div class="logo-placeholder" style="display: none;">♛</div>
+      </div>
+      <h1>UNICORNIO NEGRO <span>Brujo Mayor de Catemaco</span></h1>
+    </div>
+    <div class="ncua-ohl">
+      <span class="badge"><i class="fas fa-eye"></i> Círculo Superior</span>
+      <span class="badge"><i class="fas fa-crown"></i> Tradición</span>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div id="landingContent">
+    <!-- HERO - BOTÓN SIN TRACK -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2>
+          <span class="hero-accent">Doblega tu Destino:</span><br>Alta Magia de Catemaco
+        </h2>
+        <p class="hero-sub">Recupera al ser amado, destruye bloqueos y atrae la fortuna con el poder del Brujo Mayor. El unicornio negro guía tu transformación.</p>
+        <!-- Botón principal SIN track, solo muestra formulario -->
+        <button class="btn-cta" id="showFormBtn">
+          <i class="fas fa-moon"></i> Tomar Consulta Gratis
+        </button>
+      </div>
+    </section>
+
+    <!-- IMAGEN UNICORNIO -->
+    <div class="unicorn-image-section">
+      <div class="unicorn-image-container">
+        <img src="unicornio-negro.jpg" alt="Unicornio Negro - Brujo Mayor" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x300/1e110a/b48c3c?text=Unicornio+Negro';">
+      </div>
+      <div class="image-caption">🦄 El guardián de los pactos</div>
+    </div>
+
+    <!-- BENEFICIOS (PODERES) -->
+    <h2 class="section-title">Poderes del Brujo</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon-lg"><i class="fas fa-hourglass-half"></i></div>
+        <div>
+          <h3>Resultados en 24 Horas</h3>
+          <p>La magia de Catemaco actúa rápido. Siente el cambio antes de un día.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon-lg"><i class="fas fa-hand-fist"></i></div>
+        <div>
+          <h3>Sin secretos ocultos</h3>
+          <p>Pactos de fidelidad, riqueza y protección. Tradición ancestral sin engaños.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon-lg"><i class="fas fa-ghost"></i></div>
+        <div>
+          <h3>Discreción absoluta</h3>
+          <p>Protección espiritual y total privacidad. Solo tú y el Brujo Mayor.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVIDENCIAS DE PODER (CARRUSEL CON BOTONES QUE LLEVAN AL FORMULARIO SIN TRACK) -->
+    <div class="evidencias-section">
+      <h3 class="evidencias-title">Evidencias de mi Poder</h3>
+      <p class="evidencias-sub">Resultados reales de mis rituales</p>
+      
+      <div class="evidencias-carousel">
+        <div class="evidencias-inner" id="evidenciasInner">
+          <!-- Evidencia 1: Amarre / Retorno de pareja -->
+          <div class="evidencia-item">
+            <div class="evidencia-card">
+              <img src="evidencia-amarre.jpg" alt="Ritual de amarre" class="evidencia-img" onerror="this.onerror=null; this.src='https://placehold.co/400x200/2b1e12/b48c3c?text=Amarre+de+Pareja'">
+              <h4 class="evidencia-titulo">✨ Amarre y Retorno ✨</h4>
+              <p class="evidencia-desc">Pareja unida después de 3 años de separación. El poder del amor siempre regresa.</p>
+              <!-- Botón SIN track, solo muestra formulario -->
+              <button class="btn-evidencia-form" onclick="showFormOnly()">
+                <i class="fab fa-whatsapp"></i> Contratar este poder
+              </button>
+            </div>
+          </div>
+          <!-- Evidencia 2: Salud / Sanación -->
+          <div class="evidencia-item">
+            <div class="evidencia-card">
+              <img src="evidencia-sanacion.jpg" alt="Ritual de sanación" class="evidencia-img" onerror="this.onerror=null; this.src='https://placehold.co/400x200/2b1e12/b48c3c?text=Sanación+Espiritual'">
+              <h4 class="evidencia-titulo">🌿 Sanación y Salud 🌿</h4>
+              <p class="evidencia-desc">Limpieza energética profunda. Cliente recuperó su bienestar físico y espiritual.</p>
+              <!-- Botón SIN track, solo muestra formulario -->
+              <button class="btn-evidencia-form" onclick="showFormOnly()">
+                <i class="fab fa-whatsapp"></i> Contratar este poder
+              </button>
+            </div>
+          </div>
+          <!-- Evidencia 3: Prosperidad / Dinero -->
+          <div class="evidencia-item">
+            <div class="evidencia-card">
+              <img src="evidencia-prosperidad.jpg" alt="Ritual de prosperidad" class="evidencia-img" onerror="this.onerror=null; this.src='https://placehold.co/400x200/2b1e12/b48c3c?text=Prosperidad+y+Dinero'">
+              <h4 class="evidencia-titulo">💰 Prosperidad y Dinero 💰</h4>
+              <p class="evidencia-desc">Negocio al borde de la quiebra. Después del ritual, las ventas se triplicaron.</p>
+              <!-- Botón SIN track, solo muestra formulario -->
+              <button class="btn-evidencia-form" onclick="showFormOnly()">
+                <i class="fab fa-whatsapp"></i> Contratar este poder
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles del carrusel de evidencias -->
+      <div class="evidencias-dots" id="evidenciasDots">
+        <span class="evidencia-dot active"></span>
+        <span class="evidencia-dot"></span>
+        <span class="evidencia-dot"></span>
+      </div>
+      <div class="evidencias-controls">
+        <button class="evidencias-btn" id="prevEvidencia"><i class="fas fa-chevron-left"></i></button>
+        <button class="evidencias-btn" id="nextEvidencia"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <!-- TESTIMONIOS EN GRID (2 COLUMNAS) -->
+    <div class="testimonios-grid-section">
+      <h2 class="section-title">Testimonios desde USA</h2>
+      <div class="testimonios-grid">
+        <!-- Testimonio 1 -->
+        <div class="testimonio-card-grid">
+          <div class="testimonio-foto-grid">
+            <img src="cliente1.jpg" alt="Laura M." onerror="this.src='https://placehold.co/60x60/2b1e12/b48c3c?text=LM'">
+          </div>
+          <div class="testimonio-nombre-grid">Laura M.</div>
+          <div class="testimonio-ubicacion-grid">Houston, TX 🇺🇸</div>
+          <div class="testimonio-estrellas-grid">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <div class="testimonio-texto-grid">"Mi esposo volvió a casa después de 2 años. El Brujo Mayor lo hizo posible."</div>
+        </div>
+        <!-- Testimonio 2 -->
+        <div class="testimonio-card-grid">
+          <div class="testimonio-foto-grid">
+            <img src="cliente2.jpg" alt="Carlos R." onerror="this.src='https://placehold.co/60x60/2b1e12/b48c3c?text=CR'">
+          </div>
+          <div class="testimonio-nombre-grid">Carlos R.</div>
+          <div class="testimonio-ubicacion-grid">Miami, FL 🇺🇸</div>
+          <div class="testimonio-estrellas-grid">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <div class="testimonio-texto-grid">"Mi restaurante estaba en quiebra. Después del ritual, las ventas se duplicaron."</div>
+        </div>
+        <!-- Testimonio 3 -->
+        <div class="testimonio-card-grid">
+          <div class="testimonio-foto-grid">
+            <img src="cliente3.jpg" alt="Patricia S." onerror="this.src='https://placehold.co/60x60/2b1e12/b48c3c?text=PS'">
+          </div>
+          <div class="testimonio-nombre-grid">Patricia S.</div>
+          <div class="testimonio-ubicacion-grid">Los Ángeles, CA 🇺🇸</div>
+          <div class="testimonio-estrellas-grid">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <div class="testimonio-texto-grid">"Recibí una herencia inesperada a los 12 días del pacto de dinero."</div>
+        </div>
+        <!-- Testimonio 4 -->
+        <div class="testimonio-card-grid">
+          <div class="testimonio-foto-grid">
+            <img src="cliente4.jpg" alt="Jorge L." onerror="this.src='https://placehold.co/60x60/2b1e12/b48c3c?text=JL'">
+          </div>
+          <div class="testimonio-nombre-grid">Jorge L.</div>
+          <div class="testimonio-ubicacion-grid">Chicago, IL 🇺🇸</div>
+          <div class="testimonio-estrellas-grid">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <div class="testimonio-texto-grid">"Protección contra envidias. Mi negocio ahora está libre de malas vibras."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN CAPTURAS DE CHATS -->
+    <div class="chats-section">
+      <h2 class="section-title">Conversaciones con Clientes</h2>
+      <p style="text-align: center; color: #d4b68a; margin-bottom: 1rem;">Capturas reales de nuestros chats</p>
+      <div class="chats-grid">
+        <div class="chat-card">
+          <div class="chat-image">
+            <img src="chat1.jpg" alt="Captura de chat 1" onerror="this.onerror=null; this.src='https://placehold.co/400x600/1e110a/b48c3c?text=Chat+1'">
+          </div>
+          <div class="chat-caption">
+            <i class="fas fa-check-circle"></i> Cliente desde Houston
+          </div>
+        </div>
+        <div class="chat-card">
+          <div class="chat-image">
+            <img src="chat2.jpg" alt="Captura de chat 2" onerror="this.onerror=null; this.src='https://placehold.co/400x600/1e110a/b48c3c?text=Chat+2'">
+          </div>
+          <div class="chat-caption">
+            <i class="fas fa-check-circle"></i> Cliente desde Miami
+          </div>
+        </div>
+        <div class="chat-card">
+          <div class="chat-image">
+            <img src="chat3.jpg" alt="Captura de chat 3" onerror="this.onerror=null; this.src='https://placehold.co/400x600/1e110a/b48c3c?text=Chat+3'">
+          </div>
+          <div class="chat-caption">
+            <i class="fas fa-check-circle"></i> Cliente desde Los Ángeles
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN CONSULTA DE PODER (formulario) -->
+  <div id="formSection" class="form-section">
+    <div class="form-card">
+      <div class="form-header">
+        <h3>Consulta con el Brujo Mayor</h3>
+        <p>Completa tu pedido de poder. Canalización inmediata.</p>
+      </div>
+
+      <!-- NUEVO MENSAJE INTRODUCTORIO -->
+      <div class="form-intro-message">
+        <i class="fas fa-feather-alt"></i> Al completar estos datos, el Maestro Unicornio Negro recibirá tu consulta y te dará una respuesta clara en WhatsApp.
+      </div>
+
+      <form id="magicForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label><i class="fas fa-moon"></i> Nombre completo</label>
+            <input type="text" id="nombre" class="form-control" required placeholder="Tu nombre real">
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-calendar-alt"></i> Fecha de nacimiento</label>
+            <input type="date" id="fechaNacimiento" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-skull"></i> Tipo de trabajo</label>
+            <select id="trabajo" class="form-control" required onchange="handleTrabajoChange(this)">
+              <option value="Problemas de Pareja">Problemas de Pareja</option>
+              <option value="Limpieza espiritual">Limpieza espiritual</option>
+              <option value="Problemas de Salud">Problemas de Salud</option>
+              <option value="Abrecaminos">Abrecaminos / éxito</option>
+              <option value="Protección contra envidias">Protección contra envidias</option>
+              <option value="personalizado">✍️ Escribir con mis propias palabras</option>
+            </select>
+          </div>
+          <!-- Contenedor para el mensaje personalizado (oculto por defecto) -->
+          <div id="mensajePersonalizadoContainer" class="form-group" style="display: none;">
+            <label><i class="fas fa-feather"></i> Tu petición personal</label>
+            <textarea id="mensajePersonalizado" class="form-control" rows="3" placeholder="Describe tu situación o el tipo de ayuda que necesitas..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary">Enviar consulta</button>
+      </form>
+
+      <div id="loading" class="resultado">
+        <div class="loader"></div>
+        <p style="color:#e1c285;">El Brujo Mayor está canalizando tu petición...</p>
+      </div>
+
+      <div id="resultado" class="resultado"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-legal">
+    <div class="legal-links">
+      <a href="#">Círculo Superior de Catemaco</a>
+      <a href="#">Pactos y Tradición</a>
+    </div>
+    <p>© 2026 Unicornio Negro - Brujo Mayor. Todos los derechos reservados.</p>
+    <small>La fe mueve montañas. Resultados sujetos a la voluntad del universo.</small>
+  </footer>
+</div>
+
+<!-- SCRIPT -->
+<script>
+  // Función para manejar el cambio en el select de trabajo
+  function handleTrabajoChange(select) {
+    const container = document.getElementById('mensajePersonalizadoContainer');
+    if (select.value === 'personalizado') {
+      container.style.display = 'block';
+      document.getElementById('mensajePersonalizado').setAttribute('required', 'required');
+    } else {
+      container.style.display = 'none';
+      document.getElementById('mensajePersonalizado').removeAttribute('required');
+    }
+  }
+
+  // Función para mostrar el formulario SIN track
+  function showFormOnly() {
+    const landingDiv = document.getElementById('landingContent');
+    const formSection = document.getElementById('formSection');
+    landingDiv.style.transition = 'opacity 0.4s ease';
+    landingDiv.style.opacity = '0';
+    setTimeout(() => {
+      landingDiv.style.display = 'none';
+      formSection.style.display = 'block';
+      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 350);
+  }
+
+  // Carrusel de Evidencias
+  const evidenciasInner = document.getElementById('evidenciasInner');
+  const prevEvidencia = document.getElementById('prevEvidencia');
+  const nextEvidencia = document.getElementById('nextEvidencia');
+  const evidenciaDots = document.querySelectorAll('.evidencia-dot');
+  let evidenciaIndex = 0;
+  const totalEvidencias = document.querySelectorAll('.evidencia-item').length;
+
+  function updateEvidencias(index) {
+    if (index < 0) index = totalEvidencias - 1;
+    if (index >= totalEvidencias) index = 0;
+    evidenciaIndex = index;
+    evidenciasInner.style.transform = `translateX(-${evidenciaIndex * 100}%)`;
+    evidenciaDots.forEach((dot, i) => dot.classList.toggle('active', i === evidenciaIndex));
+  }
+
+  prevEvidencia.addEventListener('click', () => updateEvidencias(evidenciaIndex - 1));
+  nextEvidencia.addEventListener('click', () => updateEvidencias(evidenciaIndex + 1));
+  evidenciaDots.forEach((dot, idx) => dot.addEventListener('click', () => updateEvidencias(idx)));
+
+  // Transición hero → formulario (botón principal SIN track)
+  const showFormBtn = document.getElementById('showFormBtn');
+  const landingDiv = document.getElementById('landingContent');
+  const formSection = document.getElementById('formSection');
+
+  showFormBtn.addEventListener('click', function() {
+    landingDiv.style.transition = 'opacity 0.4s ease';
+    landingDiv.style.opacity = '0';
+    setTimeout(() => {
+      landingDiv.style.display = 'none';
+      formSection.style.display = 'block';
+      formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 350);
+  });
+
+  // Simulación de consulta - EL ÚNICO TRACK ESTÁ EN EL BOTÓN DE WHATSAPP FINAL
+  document.getElementById("magicForm").addEventListener("submit", function(event){
+    event.preventDefault();
+    document.getElementById("magicForm").style.display = "none";
+    document.getElementById("loading").style.display = "block";
+
+    setTimeout(() => {
+      document.getElementById("loading").style.display = "none";
+
+      const nombre = document.getElementById("nombre").value;
+      const trabajoSelect = document.getElementById("trabajo");
+      let trabajo = trabajoSelect.value;
+      const mensajePersonalizado = document.getElementById("mensajePersonalizado").value;
+
+      // Si la opción es personalizada, usamos el mensaje del textarea
+      if (trabajo === 'personalizado') {
+        trabajo = "Petición personal: " + (mensajePersonalizado || "No especificada");
+      }
+
+      const resultadoDiv = document.getElementById("resultado");
+      resultadoDiv.style.display = "block";
+      // Número actualizado
+      const whatsappLink = `https://wa.me/522296630214?text=Hola%20Brujo%20Mayor,%20soy%20${encodeURIComponent(nombre)}.%20Mi%20petición:%20${encodeURIComponent(trabajo)}`;
+
+      resultadoDiv.innerHTML = `
+        <h3 style="color:#e6c480; margin-bottom:1rem;">🪄 Consulta Recibida</h3>
+        <p style="margin-bottom:1rem; color:#f2dbb5;"><strong>${nombre}</strong>, el Brujo Mayor atiende tu ruego.</p>
+        <div class="resumen">
+          <p><span>Trabajo solicitado:</span> <span>${trabajo.substring(0,100)}…</span></p>
+        </div>
+        <p style="color:#ccb185;">El Brujo Mayor De Catemaco está esperando tu mensaje por WhatsApp para tomar tu consulta GRATIS.</p>
+        <!-- ÚNICO BOTÓN CON TRACK SubmitApplication -->
+        <a class="whatsapp-btn" href="${whatsappLink}" target="_blank" onclick="fbq('track', 'SubmitApplication');">
+          <i class="fab fa-whatsapp"></i> Enviar mensaje de WhatsApp
+        </a>
+      `;
+    }, 8000);
+  });
+</script>
+</body>
+</html>
