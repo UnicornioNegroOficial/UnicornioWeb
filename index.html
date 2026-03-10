@@ -716,6 +716,16 @@
       max-width: 280px;
       margin: 0.5rem auto;
       cursor: pointer;
+      border: none;
+      background: #25D366;
+      color: white;
+      border: 2px solid #075E54;
+      transition: 0.2s;
+    }
+
+    .whatsapp-btn:hover {
+      background: #128C7E;
+      transform: scale(1.02);
     }
 
     /* ===== BOTÓN FLOTANTE DE WHATSAPP (SIN TRACK) ===== */
@@ -1156,7 +1166,7 @@ src="https://www.facebook.com/tr?id=2118586505648212&ev=PageView&noscript=1"
     }, 350);
   });
 
-  // Simulación de consulta - EL ÚNICO TRACK ESTÁ EN EL BOTÓN DE WHATSAPP FINAL
+  // Simulación de consulta - EL ÚNICO TRACK ESTÁ EN EL BOTÓN DE WHATSAPP FINAL (CORREGIDO)
   document.getElementById("magicForm").addEventListener("submit", function(event){
     event.preventDefault();
     document.getElementById("magicForm").style.display = "none";
@@ -1187,10 +1197,10 @@ src="https://www.facebook.com/tr?id=2118586505648212&ev=PageView&noscript=1"
           <p><span>Trabajo solicitado:</span> <span>${trabajo.substring(0,100)}…</span></p>
         </div>
         <p style="color:#ccb185;">El Brujo Mayor De Catemaco está esperando tu mensaje por WhatsApp para tomar tu consulta GRATIS.</p>
-        <!-- ÚNICO BOTÓN CON TRACK SubmitApplication -->
-        <a class="whatsapp-btn" href="${whatsappLink}" target="_blank" onclick="fbq('track', 'SubmitApplication');">
+        <!-- ÚNICO BOTÓN CON TRACK SubmitApplication (CORREGIDO) -->
+        <button class="whatsapp-btn" onclick="fbq('track', 'SubmitApplication'); setTimeout(function(){ window.location.href = '${whatsappLink}'; }, 300);">
           <i class="fab fa-whatsapp"></i> Enviar mensaje de WhatsApp
-        </a>
+        </button>
       `;
     }, 8000);
   });
